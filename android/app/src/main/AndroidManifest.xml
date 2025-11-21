@@ -32,6 +32,27 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+            <!-- Add this meta-data only if you are using Navigator 2.0 approach
+    such as "go_router" or "auto_route" -->
+    <meta-data
+      android:name="flutter_deeplinking_enabled"
+      android:value="true" />
+
+    <!-- Write This code-->
+    <intent-filter android:autoVerify="true">
+      <action android:name="android.intent.action.VIEW" />
+      <category android:name="android.intent.category.DEFAULT" />
+      <category android:name="android.intent.category.BROWSABLE" />
+      
+      <data android:scheme="http" />
+      <data android:scheme="https" />
+
+      <!-- Include one or more domains that should be verified. -->
+      <data android:host="example.com" />
+    </intent-filter>
+    <!-- End-->
+    
     </application>
     <!-- Required to query activities that can process text, see:
          https://developer.android.com/training/package-visibility and

@@ -1,4 +1,4 @@
-import 'package:flutter_assignment/data/datasources/remote/api_service.dart';
+import 'package:flutter_assignment/core/network/api_service.dart';
 import 'package:flutter_assignment/domin/usecases/get_post_usecases.dart';
 import 'package:get/get.dart';
 import '../../data/repositories/post_repository_impl.dart';
